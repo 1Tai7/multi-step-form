@@ -1,0 +1,42 @@
+.steps-container {
+  background-image: url("./../../assets/bg-sidebar-desktop.svg");
+  height: 70vh;
+  width: auto;
+  padding: 2rem;
+  background-size: cover;
+}
+.steps-container .step-one,
+.step-two,
+.step-three,
+.step-four {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+  gap: 1rem;
+  width: 13rem;
+  color: #eef5ff;
+}
+
+.steps-container .step-number {
+  border: 1px solid #eef5ff;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.steps-container .step-number_active{
+    background-color: #eef5ff;
+    color: #333333;
+    font-weight: bold;
+    border: none;
+}
+.steps-container h5{
+    color: #eef5ff79 !important;
+    font-weight: lighter;
+}
+.steps-container .step-items{
+    letter-spacing: 1px;
+}
