@@ -1,0 +1,51 @@
+.personal-info-container {
+  padding: 2rem 4rem 0 4rem;
+  color: #022651;
+  letter-spacing: 1px;
+}
+.personal-info-container h2 {
+  font-size: xx-large;
+}
+.personal-info-container p {
+  color: #afb0b6;
+  font-size: small;
+  padding-bottom: 1.5rem;
+}
+.personal-info-container .form-info {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.personal-info-container label {
+  font-size: small;
+  font-weight: 500;
+  padding-bottom: 7px;
+}
+.personal-info-container input {
+  padding: 0.5rem;
+  letter-spacing: 1px;
+  color: #022651;
+  border: 1px solid #afb0b654;
+  border-radius: 4px;
+}
+
+.personal-info-container input::placeholder {
+  opacity: 0.5;
+}
+.personal-info-container .next-step-button {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  height: 29vh;
+  align-items: flex-end;
+}
+.personal-info-container .next-step-button input{
+    background-color: #022651;
+    color: #fff;
+    padding: 0.8rem;
+    border-radius: 7px;
+}
+.personal-info-container .next-step-button input:hover{
+background-color: #F9818D;
+}

@@ -1,4 +1,5 @@
 import "./App.css";
+import PersonalInfo from "./components/personalInfo/personalInfo";
 import Steps from "./components/steps/steps";
 //import Hi from "./components/hi";
 
@@ -11,6 +12,7 @@ function App() {
       <section className="form-container">
 
         <Steps />
+        <PersonalInfo/>
       </section>
 
       {/**
