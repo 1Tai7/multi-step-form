@@ -1,0 +1,55 @@
+.select-your-plan-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem 2rem 0 5rem;
+}
+
+.select-your-plan-container h2 {
+  font-weight: 500;
+  font-size: xx-large;
+  color: #022651;
+}
+.select-your-plan-container p {
+  color: #afb0b6;
+  font-size: small;
+  padding-bottom: 1.5rem;
+}
+.select-your-plan-container .plans-containers {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+.select-your-plan-container .plan-container {
+  border: 1px solid #afb0b663;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 8rem;
+}
+.select-your-plan-container .plan-container:hover {
+  border: 1px solid #022651;
+}
+.select-your-plan-container .icon-container {
+  padding-bottom: 2rem;
+}
+.select-your-plan-container h3 {
+  font-weight: 500;
+  color: #022651;
+}
+.select-your-plan-container .plans-containers span {
+  color: #afb0b6;
+}
+
+.select-your-plan-container .plans {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #eef5ff;
+  border-radius: 5px;
+  padding: 8px;
+  color: #022651;
+  font-weight: 500;
+}
+.select-your-plan-container .plans h4 {
+  padding-inline: 1rem;
+}
