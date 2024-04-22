@@ -1,6 +1,4 @@
 .form-btns {
-  height: 28vh;
-  padding: 0 3rem 0 4rem;
   display: flex;
   align-items: flex-end;
 }
