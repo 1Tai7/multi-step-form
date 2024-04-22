@@ -4,7 +4,9 @@
   
 }
 .personal-info-container h2 {
+  font-weight: 500;
   font-size: xx-large;
+  color: #022651;
 }
 .personal-info-container p {
   color: #afb0b6;

@@ -1,0 +1,59 @@
+.summary-container h2 {
+  font-weight: 500;
+  font-size: xx-large;
+  color: #022651;
+}
+.summary-container p {
+  color: #afb0b6;
+  font-size: small;
+  padding-bottom: 2rem;
+}
+.summary-container .confirmation-container {
+  background-color: #eef5ff;
+  padding: 1rem 2rem;
+  border-radius: 7px;
+}
+.summary-container .plan-confirmation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  color: #022651;
+  padding-bottom: 1rem;
+}
+.summary-container .text-plan a {
+  color: #93949c !important;
+  font-weight: lighter;
+  font-size: small;
+  border-bottom: 1px solid;
+}
+.summary-container .text-plan a:hover {
+  color: #f9818d !important;
+}
+
+.summary-container .add-srv {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+.summary-container .add-srv span:nth-child(1) {
+  color: #93949c;
+}
+.summary-container .add-srv span:nth-child(2) {
+  color: #022651;
+  font-weight: 500;
+}
+.summary-container .total-cost-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.summary-container .total-cost-plan span:nth-child(1){
+  color: #93949c;
+}
+.summary-container .total-cost-plan span:nth-child(2){
+    color: #483eff;
+    font-weight: 700;
+    font-size: x-large;
+}

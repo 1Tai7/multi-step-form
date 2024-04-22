@@ -6,6 +6,7 @@ import Steps from "./components/steps/steps";
 import SelectYourPlans from "./components/selectYourPlans/selectYourPlans";
 import FormButtons from "./components/formButtons/formButtons";
 import PickAddOns from "./components/pickAddOns/pickAddOns";
+import Summary from "./components/summary/summary";
 
 //import Hi from "./components/hi";
 
@@ -24,6 +25,7 @@ const App = () => {
           {step === 1 && <PersonalInfo />}
           {step === 2 && <SelectYourPlans />}
           {step === 3 && <PickAddOns/>}
+          {step === 4 && <Summary/>}
           <FormButtons setStep={setStep} step={step} />
         </div>
       </section>
