@@ -1,0 +1,29 @@
+.form-btns {
+  height: 28vh;
+  padding: 0 3rem 0 4rem;
+  display: flex;
+  align-items: flex-end;
+}
+.btns-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-btns .go-back-btn {
+  color: #afb0b6;
+  font-weight: 500;
+}
+.form-btns .go-back-btn:hover {
+  color: #022651;
+}
+.form-btns .next-step-btn input {
+  background-color: #022651;
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 7px;
+  font-weight: 500;
+}
+.form-btns .next-step-btn input:hover {
+  background-color: #f9818d;
+}
