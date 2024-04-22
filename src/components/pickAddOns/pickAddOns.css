@@ -1,5 +1,4 @@
-.add-ons-container h2,
-h3 {
+.add-ons-container h2{
   font-weight: 500;
   font-size: xx-large;
   color: #022651;
@@ -27,7 +26,7 @@ h3 {
     width: 100%;
 }
 .add-ons-container .ons:hover {
-  border: 1px solid #022651;
+  border: 1px solid #483EFF;
 }
 .add-ons-container .ons-text h3 {
   font-weight: 500;
@@ -39,7 +38,7 @@ h3 {
   padding-bottom: 1.5rem;
 }
 .add-ons-container .ons .ons-cost {
-  color: #0226519e;
+  color: #483effb4;
   font-weight: 500;
 
 }
