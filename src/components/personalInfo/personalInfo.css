@@ -1,5 +1,5 @@
 .personal-info-container {
-  padding: 2rem 4rem 0 4rem;
+  padding: 2rem 3rem 0 4rem;
   color: #022651;
   letter-spacing: 1px;
 }
@@ -32,20 +32,4 @@
 
 .personal-info-container input::placeholder {
   opacity: 0.5;
-}
-.personal-info-container .next-step-button {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-  height: 29vh;
-  align-items: flex-end;
-}
-.personal-info-container .next-step-button input{
-    background-color: #022651;
-    color: #fff;
-    padding: 0.8rem;
-    border-radius: 7px;
-}
-.personal-info-container .next-step-button input:hover{
-background-color: #F9818D;
 }
