@@ -5,6 +5,7 @@ import PersonalInfo from "./components/personalInfo/personalInfo";
 import Steps from "./components/steps/steps";
 import SelectYourPlans from "./components/selectYourPlans/selectYourPlans";
 import FormButtons from "./components/formButtons/formButtons";
+import PickAddOns from "./components/pickAddOns/pickAddOns";
 
 //import Hi from "./components/hi";
 
@@ -19,9 +20,10 @@ const App = () => {
       {/**esto es un fragmento*/}
       <section className="form-container">
         <Steps step={step} />
-        <div className="forms-buttons">
+        <div className="forms">
           {step === 1 && <PersonalInfo />}
           {step === 2 && <SelectYourPlans />}
+          {step === 3 && <PickAddOns/>}
           <FormButtons setStep={setStep} step={step} />
         </div>
       </section>

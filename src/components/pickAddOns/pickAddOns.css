@@ -1,0 +1,45 @@
+.add-ons-container h2,
+h3 {
+  font-weight: 500;
+  font-size: xx-large;
+  color: #022651;
+}
+.add-ons-container p {
+  color: #afb0b6;
+  font-size: small;
+  padding-bottom: 1.5rem;
+}
+.add-ons-container .ons {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid #afb0b654;
+  border-radius: 7px;
+  margin-bottom: 1rem;
+}
+.add-ons-container .ons .ons-text {
+  margin-left: 1rem;
+}
+.add-ons-container .ons-description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.add-ons-container .ons:hover {
+  border: 1px solid #022651;
+}
+.add-ons-container .ons-text h3 {
+  font-weight: 500;
+  color: #022651;
+}
+.add-ons-container .ons-text span {
+  color: #afb0b6;
+  font-size: small;
+  padding-bottom: 1.5rem;
+}
+.add-ons-container .ons .ons-cost {
+  color: #0226519e;
+  font-weight: 500;
+
+}

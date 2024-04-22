@@ -1,9 +1,3 @@
-.select-your-plan-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 2rem 3rem 0 4rem;
-}
 
 .select-your-plan-container h2 {
   font-weight: 500;
