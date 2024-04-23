@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./formButtons.css";
-const FormButtons = ({ setStep, step }) => {
+const FormButtons = ({ setStep, step, validateStepOne }) => {
   const [confirmForm, setConfirmForm] = useState(false);
   const handleStep = () => {
     if (step >= 3) {
       setConfirmForm(true);
     }
-    setStep(step + 1);
+    if (validateStepOne === false) {
+      setStep(step + 1);
+    }
   };
   const handleBackStep = () => {
     setConfirmForm(false);
