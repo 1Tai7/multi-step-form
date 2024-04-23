@@ -15,18 +15,30 @@ const App = () => {
   //   alert("se envio!");
   const [step, setStep] = useState(1);
   //const nextStep = () => {};
-
+  const [personalInfo, setPersonalInfo] = useState({});
+  const [validateStepOne, setValidateStepOne] = useState(false);
+  console.log(validateStepOne);
   return (
     <>
       {/**esto es un fragmento*/}
       <section className="form-container">
         <Steps step={step} />
         <div className="forms">
-          {step === 1 && <PersonalInfo />}
+          {step === 1 && (
+            <PersonalInfo
+              personalInfo={personalInfo}
+              setPersonalInfo={setPersonalInfo}
+              setValidateStepOne={setValidateStepOne}
+            />
+          )}
           {step === 2 && <SelectYourPlans />}
-          {step === 3 && <PickAddOns/>}
-          {step === 4 && <Summary/>}
-          <FormButtons setStep={setStep} step={step} />
+          {step === 3 && <PickAddOns />}
+          {step === 4 && <Summary />}
+          <FormButtons
+            setStep={setStep}
+            step={step}
+            validateStepOne={validateStepOne}
+          />
         </div>
       </section>
     </>
