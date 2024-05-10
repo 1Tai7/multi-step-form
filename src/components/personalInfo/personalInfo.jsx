@@ -48,11 +48,16 @@ const PersonalInfo = ({
     validateName();
     validateEmail();
     validatePhoneNumber();
-    setValidateStepOne(
-      validateInputName && validateInputEmail && validateInputPhoneNumber
-    );
+    if (
+      validateInputName === true ||
+      validateInputEmail === true ||
+      validateInputPhoneNumber === true
+    ) {
+      setValidateStepOne(true);
+    } else {
+      setValidateStepOne(false);
+    }
   };
-  const handleOnBlur = () => {};
 
   return (
     <div className="personal-info-container">
@@ -69,7 +74,7 @@ const PersonalInfo = ({
           name="name"
           placeholder="e.g.Stephen King"
           onChange={(e) => handleInput(e)}
-          onBlur={(e) => handleOnBlur(e)}
+          onBlur={(e) => handleInput(e)}
         />
         {validateInputEmail ? <span>Error</span> : null}
 
@@ -81,7 +86,7 @@ const PersonalInfo = ({
           name="email"
           placeholder="e.g.stephenking@gmail.com"
           onChange={(e) => handleInput(e)}
-          onBlur={(e) => handleOnBlur(e)}
+          onBlur={(e) => handleInput(e)}
         />
         {validateInputPhoneNumber ? <span>Error</span> : null}
 
@@ -93,7 +98,7 @@ const PersonalInfo = ({
           name="phoneNumber"
           placeholder="e.g. +1 123 456 7890"
           onChange={(e) => handleInput(e)}
-          onBlur={(e) => handleOnBlur(e)}
+          onBlur={(e) => handleInput(e)}
         />
       </form>
     </div>
