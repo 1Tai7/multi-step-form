@@ -17,7 +17,8 @@ const App = () => {
   //const nextStep = () => {};
   const [personalInfo, setPersonalInfo] = useState({});
   const [validateStepOne, setValidateStepOne] = useState(false);
-  console.log(validateStepOne);
+  const [selectPlan, setSelectPlan] = useState();
+  const [validateStepTwo, setValidateStepTwo] = useState(true);
   return (
     <>
       {/**esto es un fragmento*/}
@@ -31,13 +32,20 @@ const App = () => {
               setValidateStepOne={setValidateStepOne}
             />
           )}
-          {step === 2 && <SelectYourPlans />}
+          {step === 2 && (
+            <SelectYourPlans
+              selectPlan={selectPlan}
+              setSelectPlan={setSelectPlan}
+              setValidateStepTwo={setValidateStepTwo}
+            />
+          )}
           {step === 3 && <PickAddOns />}
           {step === 4 && <Summary />}
           <FormButtons
             setStep={setStep}
             step={step}
             validateStepOne={validateStepOne}
+            validateStepTwo={validateStepTwo}
           />
         </div>
       </section>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "./selectYourPlan.css";
 import iconArcade from "./../../assets/icon-arcade.svg";
 import iconAdvanced from "./../../assets/icon-advanced.svg";
@@ -5,14 +6,23 @@ import iconPro from "./../../assets/icon-pro.svg";
 import { Switch } from "@nextui-org/react";
 import SelectYourPlan from "./selectYourPlan";
 import { useState } from "react";
-const SelectYourPlans = () => {
+const SelectYourPlans = ({ selectPlan, setSelectPlan, setValidateStepTwo }) => {
   const [arcade, setArcade] = useState(false);
   const [advanced, setAdvanced] = useState(false);
   const [pro, setPro] = useState(false);
 
   const [switchValue, setSwitchValue] = useState(true);
 
-  const handleClick = (id) => {
+  const validateChoosePlan = () => {
+    if (selectPlan) {
+      setValidateStepTwo(false);
+    }
+  };
+  validateChoosePlan(); 
+  console.log(selectPlan);
+  const handleClick = (id, planCost) => {
+    setSelectPlan({ name: id, planCost });
+
     switch (id) {
       case "Arcade":
         setArcade(true);
@@ -51,7 +61,9 @@ const SelectYourPlans = () => {
           name="Arcade"
           planCost={`${switchValue ? "$9/mo" : "$90/yr"} `}
           disclaimer={`${switchValue ? "" : "2 months free"} `}
-          onClick={() => handleClick("Arcade")}
+          onClick={() =>
+            handleClick("Arcade", `${switchValue ? "$9/mo" : "$90/yr"} `)
+          }
           arcade={arcade}
         />
         <SelectYourPlan
@@ -63,7 +75,9 @@ const SelectYourPlans = () => {
           name="Advanced"
           planCost={`${switchValue ? "$12/mo" : "$120/yr"} `}
           disclaimer={`${switchValue ? "" : "2 months free"} `}
-          onClick={() => handleClick("Advanced")}
+          onClick={() =>
+            handleClick("Advanced", `${switchValue ? "$12/mo" : "$120/yr"} `)
+          }
           advanced={advanced}
         />
         <SelectYourPlan
@@ -75,7 +89,9 @@ const SelectYourPlans = () => {
           name="Pro"
           planCost={`${switchValue ? "$15/mo" : "$150/yr"} `}
           disclaimer={`${switchValue ? "" : "2 months free"} `}
-          onClick={() => handleClick("Pro")}
+          onClick={() =>
+            handleClick("Pro", `${switchValue ? "$15/mo" : "$150/yr"} `)
+          }
           pro={pro}
         />
       </div>
