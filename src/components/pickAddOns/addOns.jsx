@@ -3,15 +3,35 @@ import React from "react";
 import { Checkbox } from "@nextui-org/react";
 import { PlusIcon } from "./plusIcon";
 
-const AddOns = ({ onsText, service, descriptionService, onsCost, cost }) => {
+const AddOns = ({
+  className,
+  onsText,
+  service,
+  descriptionService,
+  onsCost,
+  cost,
+  onClick,
+  onlineService,
+  largerStorage,
+  customProfile,
+}) => {
   const [isSelected, setIsSelected] = React.useState(false);
-
+  const handleCheckbox = () => {
+    setIsSelected(!isSelected);
+    onClick();
+  };
   return (
     <>
-      <div className="ons">
+      <div
+        onClick={onClick}
+        className={`${className} 
+        ${onlineService && "active"} 
+        ${largerStorage && "active"} 
+        ${customProfile && "active"}`}
+      >
         <Checkbox
-          isSelected={isSelected}
-          onValueChange={setIsSelected}
+          isSelected={onlineService || largerStorage || customProfile}
+          onValueChange={() => handleCheckbox()}
           icon={<PlusIcon />}
           color="warning"
         ></Checkbox>
