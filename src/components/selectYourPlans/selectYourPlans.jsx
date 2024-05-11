@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 import "./selectYourPlan.css";
 import iconArcade from "./../../assets/icon-arcade.svg";
@@ -5,8 +6,14 @@ import iconAdvanced from "./../../assets/icon-advanced.svg";
 import iconPro from "./../../assets/icon-pro.svg";
 import { Switch } from "@nextui-org/react";
 import SelectYourPlan from "./selectYourPlan";
-import { useState } from "react";
-const SelectYourPlans = ({ selectPlan, setSelectPlan, setValidateStepTwo }) => {
+import { useEffect, useState } from "react";
+const SelectYourPlans = ({
+  selectPlan,
+  setSelectPlan,
+  setValidateStepTwo,
+  switchValueYear,
+  setSwitchValueYear,
+}) => {
   const [arcade, setArcade] = useState(false);
   const [advanced, setAdvanced] = useState(false);
   const [pro, setPro] = useState(false);
@@ -18,8 +25,10 @@ const SelectYourPlans = ({ selectPlan, setSelectPlan, setValidateStepTwo }) => {
       setValidateStepTwo(false);
     }
   };
-  validateChoosePlan(); 
-  console.log(selectPlan);
+
+  useEffect(() => {
+    validateChoosePlan();
+  }, [selectPlan]);
   const handleClick = (id, planCost) => {
     setSelectPlan({ name: id, planCost });
 
@@ -44,7 +53,7 @@ const SelectYourPlans = ({ selectPlan, setSelectPlan, setValidateStepTwo }) => {
 
   const handleSwitch = () => {
     setSwitchValue(!switchValue);
-    console.log(switchValue);
+    setSwitchValueYear(!switchValueYear);
   };
 
   return (

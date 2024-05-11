@@ -19,6 +19,8 @@ const App = () => {
   const [validateStepOne, setValidateStepOne] = useState(false);
   const [selectPlan, setSelectPlan] = useState();
   const [validateStepTwo, setValidateStepTwo] = useState(true);
+  const [addOns, setAddOns] = useState([]);
+  const [switchValueYear, setSwitchValueYear] = useState(true);
   return (
     <>
       {/**esto es un fragmento*/}
@@ -37,9 +39,17 @@ const App = () => {
               selectPlan={selectPlan}
               setSelectPlan={setSelectPlan}
               setValidateStepTwo={setValidateStepTwo}
+              switchValueYear={switchValueYear}
+              setSwitchValueYear={setSwitchValueYear}
             />
           )}
-          {step === 3 && <PickAddOns />}
+          {step === 3 && (
+            <PickAddOns
+              addOns={addOns}
+              setAddOns={setAddOns}
+              switchValueYear={switchValueYear}
+            />
+          )}
           {step === 4 && <Summary />}
           <FormButtons
             setStep={setStep}

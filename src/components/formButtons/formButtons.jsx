@@ -13,7 +13,9 @@ const FormButtons = ({ setStep, step, validateStepOne, validateStepTwo }) => {
     if (validateStepTwo === false && step === 2) {
       setStep(step + 1);
     }
-    console.log(step);
+    if (step === 3) {
+      setStep(step + 1);
+    }
   };
   const handleBackStep = () => {
     setConfirmForm(false);
