@@ -4,7 +4,39 @@ import iconAdvanced from "./../../assets/icon-advanced.svg";
 import iconPro from "./../../assets/icon-pro.svg";
 import { Switch } from "@nextui-org/react";
 import SelectYourPlan from "./selectYourPlan";
+import { useState } from "react";
 const SelectYourPlans = () => {
+  const [arcade, setArcade] = useState(false);
+  const [advanced, setAdvanced] = useState(false);
+  const [pro, setPro] = useState(false);
+
+  const [switchValue, setSwitchValue] = useState(true);
+
+  const handleClick = (id) => {
+    switch (id) {
+      case "Arcade":
+        setArcade(true);
+        setAdvanced(false);
+        setPro(false);
+        break;
+      case "Advanced":
+        setArcade(false);
+        setAdvanced(true);
+        setPro(false);
+        break;
+      case "Pro":
+        setArcade(false);
+        setAdvanced(false);
+        setPro(true);
+        break;
+    }
+  };
+
+  const handleSwitch = () => {
+    setSwitchValue(!switchValue);
+    console.log(switchValue);
+  };
+
   return (
     <div className="select-your-plan-container">
       <h2>Select your plan</h2>
@@ -15,27 +47,36 @@ const SelectYourPlans = () => {
           iconContainer="icon-container"
           icon={iconArcade}
           iconName="arcade-icon"
-          plan="arcade-plan"
+          plan="plan"
           name="Arcade"
-          planCost={`$9/mo`}
+          planCost={`${switchValue ? "$9/mo" : "$90/yr"} `}
+          disclaimer={`${switchValue ? "" : "2 months free"} `}
+          onClick={() => handleClick("Arcade")}
+          arcade={arcade}
         />
         <SelectYourPlan
           container="plan-container"
           iconContainer="icon-container"
           icon={iconAdvanced}
           iconName="advanced-icon"
-          plan="advanced-plan"
+          plan="plan"
           name="Advanced"
-          planCost={`$12/mo`}
+          planCost={`${switchValue ? "$12/mo" : "$120/yr"} `}
+          disclaimer={`${switchValue ? "" : "2 months free"} `}
+          onClick={() => handleClick("Advanced")}
+          advanced={advanced}
         />
         <SelectYourPlan
           container="plan-container"
           iconContainer="icon-container"
           icon={iconPro}
           iconName="pro-icon"
-          plan="pro-plan"
+          plan="plan"
           name="Pro"
-          planCost={`$15/mo`}
+          planCost={`${switchValue ? "$15/mo" : "$150/yr"} `}
+          disclaimer={`${switchValue ? "" : "2 months free"} `}
+          onClick={() => handleClick("Pro")}
+          pro={pro}
         />
       </div>
       <div className="plans">
@@ -44,6 +85,7 @@ const SelectYourPlans = () => {
           defaultSelected={false}
           aria-label="Automatic updates"
           size="sm"
+          onChange={(e) => handleSwitch(e.target.checked)}
         />
         <h4>Yearly</h4>
       </div>

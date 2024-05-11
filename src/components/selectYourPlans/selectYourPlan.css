@@ -1,4 +1,3 @@
-
 .select-your-plan-container h2 {
   font-weight: 500;
   font-size: xx-large;
@@ -19,12 +18,17 @@
   border-radius: 5px;
   padding: 1rem;
   width: 8rem;
+  cursor: pointer;
 }
 .select-your-plan-container .plan-container:hover {
   border: 1px solid #022651;
 }
 .select-your-plan-container .icon-container {
   padding-bottom: 2rem;
+}
+.select-your-plan-container .plan {
+  display: flex;
+  flex-direction: column;
 }
 .select-your-plan-container h3 {
   font-weight: 500;
@@ -33,7 +37,10 @@
 .select-your-plan-container .plans-containers span {
   color: #afb0b6;
 }
-
+.select-your-plan-container .plans-containers .two-months-free {
+  color: #022651;
+  font-size: smaller;
+}
 .select-your-plan-container .plans {
   width: 100%;
   display: flex;
@@ -46,4 +53,8 @@
 }
 .select-your-plan-container .plans h4 {
   padding-inline: 1rem;
+}
+.active {
+  background-color: #eef5ff;
+  border: 1px solid #022651 !important;
 }
